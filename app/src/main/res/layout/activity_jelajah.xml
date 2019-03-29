@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/jelajah_background"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="@drawable/jelajah_menu"
+            android:paddingBottom="16dp">
+            <RelativeLayout
+            android:id="@+id/back_layout"
+            android:layout_width="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_centerVertical="true"
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_chevron_left_24dp"
+                />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kembali"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                />
+        </RelativeLayout>
+            <TextView
+                android:layout_marginLeft="32dp"
+                android:text="@string/jelajah_banyuwangi"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="-8dp"
+            android:layout_below="@id/jelajah_background"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/recomended"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:text="Recomended"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_recomended"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recomended"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="32dp"/>
+
+                <TextView
+                    android:id="@+id/pantai"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rv_recomended"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:text="Pantai"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_pantai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pantai"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="32dp"/>
+
+                <TextView
+                    android:id="@+id/dataran_tinggi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rv_pantai"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:text="Dataran Tinggi"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_dataran_tinggi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dataran_tinggi"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="32dp"/>
+
+                <TextView
+                    android:id="@+id/air_terjun"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rv_dataran_tinggi"
+                    android:layout_marginTop="16dp"
+                    android:text="Air Terjun"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_air_terjun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/air_terjun"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="32dp"/>
+
+                <TextView
+                    android:id="@+id/taman"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rv_air_terjun"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:text="Taman"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_taman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/taman"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="32dp"/>
+
+                <TextView
+                    android:id="@+id/umkm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/rv_taman"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:text="UMKM"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_umkm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/umkm"
+                    android:layout_marginTop="12dp" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+</ScrollView>
