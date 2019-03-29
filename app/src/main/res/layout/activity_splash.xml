@@ -23,6 +23,7 @@
         app:layout_constraintVertical_bias="0.39" />
 
     <ProgressBar
+        android:indeterminateTint="@color/orange"
         android:layout_width="20sp"
         android:layout_height="20sp"
         android:layout_marginEnd="8dp"

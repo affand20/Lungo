@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu.MenuActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/top_menu"
+            android:background="@drawable/top_menu"
+            android:layout_width="match_parent"
+            android:paddingTop="32dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="32dp"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:src="@android:color/white"
+                />
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/greetings"
+                    android:text="@string/greetings"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/jelajah_bwi"
+                    android:textSize="20sp"
+                    android:text="Siapkan dirimu untuk\nmenjelajah Banyuwangi"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/kelola_menu"
+            android:layout_below="@id/top_menu"
+            android:background="@drawable/kelola_menu"
+            android:layout_width="match_parent"
+            android:padding="32dp"
+            android:layout_height="210dp">
+            <TextView
+                android:text="Kelola\nJadwal Liburan"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/jelajah_menu"
+            android:layout_below="@id/kelola_menu"
+            android:background="@drawable/jelajah_menu"
+            android:layout_width="match_parent"
+            android:padding="32dp"
+            android:layout_height="210dp">
+            <TextView
+                android:text="Jelajah\nBanyuwangi"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/akomodasi_menu"
+            android:layout_below="@id/jelajah_menu"
+            android:background="@drawable/akomodasi_menu"
+            android:layout_width="match_parent"
+            android:padding="32dp"
+            android:layout_height="210dp">
+            <TextView
+                android:text="Akomodasi\ndi Banyuwangi"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/bri_menu"
+            android:layout_below="@id/akomodasi_menu"
+            android:background="@drawable/bri_menu"
+            android:layout_width="match_parent"
+            android:padding="32dp"
+            android:layout_height="210dp">
+            <TextView
+                android:text="Informasi\nTransaksi Liburan"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

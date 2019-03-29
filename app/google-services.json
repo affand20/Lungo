@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "995406810108",
+    "firebase_url": "https://lungo-32f83.firebaseio.com",
+    "project_id": "lungo-32f83",
+    "storage_bucket": "lungo-32f83.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995406810108:android:f27f43a17e288c46",
+        "android_client_info": {
+          "package_name": "id.lungodev.lungo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995406810108-oi9f9k6hpttq6llcdhsopv89ij6fnl1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ1ECP2C2E7hD9lzJmlIJhw_fnjY4nSjI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
