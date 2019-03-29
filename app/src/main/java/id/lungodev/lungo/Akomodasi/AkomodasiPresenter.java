@@ -53,14 +53,14 @@ public class AkomodasiPresenter {
         mDatabase.getReference("akomodasi/penginapan").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                listRestoran.clear();
+                listPenginapan.clear();
                 for (DataSnapshot snapshot:dataSnapshot.getChildren()){
                     Akomodasi akomodasi = snapshot.getValue(Akomodasi.class);
-                    listRestoran.add(akomodasi);
+                    listPenginapan.add(akomodasi);
                 }
-                if (listRestoran.size()>0){
+                if (listPenginapan.size()>0){
                     view.hideLoadingPenginapan();
-                    view.showAkomodasiPenginapan(listRestoran);
+                    view.showAkomodasiPenginapan(listPenginapan);
                 }
             }
 

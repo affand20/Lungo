@@ -11,7 +11,9 @@
             android:layout_width="match_parent"
             android:layout_height="210dp"
             android:background="@drawable/jelajah_menu"
-            android:paddingBottom="16dp">
+            android:paddingBottom="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp">
             <RelativeLayout
             android:id="@+id/back_layout"
             android:layout_width="wrap_content"
@@ -60,7 +62,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/recomended"
+                    android:id="@+id/tv_recomended"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="16dp"
@@ -72,12 +74,12 @@
                     android:id="@+id/rv_recomended"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/recomended"
+                    android:layout_below="@id/tv_recomended"
                     android:layout_marginTop="16dp"
                     android:layout_marginLeft="32dp"/>
 
                 <TextView
-                    android:id="@+id/pantai"
+                    android:id="@+id/tv_pantai"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/rv_recomended"
@@ -90,12 +92,12 @@
                     android:id="@+id/rv_pantai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/pantai"
+                    android:layout_below="@id/tv_pantai"
                     android:layout_marginTop="12dp"
                     android:layout_marginLeft="32dp"/>
 
                 <TextView
-                    android:id="@+id/dataran_tinggi"
+                    android:id="@+id/tv_dataran_tinggi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/rv_pantai"
@@ -108,12 +110,12 @@
                     android:id="@+id/rv_dataran_tinggi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/dataran_tinggi"
+                    android:layout_below="@id/tv_dataran_tinggi"
                     android:layout_marginTop="12dp"
                     android:layout_marginLeft="32dp"/>
 
                 <TextView
-                    android:id="@+id/air_terjun"
+                    android:id="@+id/tv_air_terjun"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/rv_dataran_tinggi"
@@ -125,12 +127,12 @@
                     android:id="@+id/rv_air_terjun"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/air_terjun"
+                    android:layout_below="@id/tv_air_terjun"
                     android:layout_marginTop="12dp"
                     android:layout_marginLeft="32dp"/>
 
                 <TextView
-                    android:id="@+id/taman"
+                    android:id="@+id/tv_taman"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/rv_air_terjun"
@@ -143,12 +145,12 @@
                     android:id="@+id/rv_taman"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/taman"
+                    android:layout_below="@id/tv_taman"
                     android:layout_marginTop="12dp"
                     android:layout_marginLeft="32dp"/>
 
                 <TextView
-                    android:id="@+id/umkm"
+                    android:id="@+id/tv_umkm"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@id/rv_taman"
@@ -161,7 +163,7 @@
                     android:id="@+id/rv_umkm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/umkm"
+                    android:layout_below="@id/tv_umkm"
                     android:layout_marginTop="12dp" />
             </RelativeLayout>
 
