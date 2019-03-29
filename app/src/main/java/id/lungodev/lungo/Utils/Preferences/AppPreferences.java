@@ -3,11 +3,14 @@ package id.lungodev.lungo.Utils.Preferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.net.URL;
+
 public class AppPreferences {
     public static final String PREFS_NAME = "app_pref";
 
     private static final String USER_ID = "user_id";
     private static final String NAMA = "nama";
+    private static final String URL_FOTO = "url_foto";
 
     private final SharedPreferences prefs;
 
@@ -23,6 +26,16 @@ public class AppPreferences {
 
     public String getUID(){
         return prefs.getString(USER_ID, null);
+    }
+
+    public void setUrlFoto(String urlFoto){
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(URL_FOTO, urlFoto);
+        editor.apply();
+    }
+
+    public String getUrlFoto(){
+        return prefs.getString(URL_FOTO, null);
     }
 
     public void setNama(String nama){

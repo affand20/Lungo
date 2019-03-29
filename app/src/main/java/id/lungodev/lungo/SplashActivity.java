@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 import id.lungodev.lungo.Login.LoginActivity;
 import id.lungodev.lungo.Menu.MenuActivity;
@@ -19,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         prefs = new AppPreferences(this);
-
+        Log.d("CEK PREFS", "onCreate: UID="+prefs.getUID()+", NAMA="+prefs.getNama());
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

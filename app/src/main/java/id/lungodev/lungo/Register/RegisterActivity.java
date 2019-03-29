@@ -3,6 +3,7 @@ package id.lungodev.lungo.Register;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.design.button.MaterialButton;
@@ -39,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView{
 
     private static int CHOOSE_IMAGE = 101;
     private Bitmap uploadedPhotoBitmap;
+    private Uri uriProfileImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +83,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView{
                             tieEmail.getText().toString(),
                             tiePassword.getText().toString(),
                             tieNomorTelepon.getText().toString(),
-                            uploadedPhotoBitmap
+                            uriProfileImage
                     );
                 }
             }
@@ -109,6 +111,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView{
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == CHOOSE_IMAGE && resultCode == Activity.RESULT_OK && data!=null && data.getData()!=null){
+            uriProfileImage = data.getData();
             try {
                 uploadedPhotoBitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), data.getData());
             } catch (IOException e) {
