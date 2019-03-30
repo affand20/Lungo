@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Akomodasi.AkomodasiActivity"></activity>
+        <activity android:name=".Jelajah.DetailJelajahActivity"></activity>
+        <activity android:name=".Akomodasi.DetailAkomodasiActivity" />
+        <activity android:name=".Jelajah.JelajahActivity" />
+        <activity android:name=".Jadwal.JadwalLiburanSayaActivity" />
+        <activity android:name=".Jadwal.Jadwalku.JadwalkuActivity" />
+        <activity android:name=".Jadwal.JadwalLiburanActivity" />
+        <activity android:name=".Akomodasi.AkomodasiActivity" />
         <activity android:name=".Menu.MenuActivity" />
         <activity
             android:name=".Register.RegisterActivity"

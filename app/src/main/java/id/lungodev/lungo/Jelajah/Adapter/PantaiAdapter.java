@@ -21,7 +21,7 @@ public class PantaiAdapter extends RecyclerView.Adapter<PantaiAdapter.PantaiHold
     private List<Jelajah> listPantai;
 
     public PantaiAdapter(List<Jelajah> listpantai){
-        this.listPantai = listPantai;
+        this.listPantai = listpantai;
     }
 
     @NonNull
@@ -58,11 +58,11 @@ public class PantaiAdapter extends RecyclerView.Adapter<PantaiAdapter.PantaiHold
             namaPantai.setText(item.getNama());
             lokasiPantai.setText(item.getLokasi_real());
             Log.d("FOTO", "bindItem: "+item.getFoto());
-//            GlideApp.with(itemView.getContext())
-//                    .asBitmap()
-//                    .load(item.getListFoto().get(0))
-//                    .fallback(R.color.teal)
-//                    .into(fotoRestoran);
+            GlideApp.with(itemView.getContext())
+                    .asBitmap()
+                    .load(item.getFoto().get(0))
+                    .fallback(R.color.teal)
+                    .into(fotoPantai);
 
         }
     }

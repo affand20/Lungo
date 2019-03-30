@@ -15,6 +15,7 @@
             android:paddingRight="16dp"
             android:paddingTop="16dp">
             <RelativeLayout
+                android:layout_marginTop="16dp"
             android:id="@+id/back_layout"
             android:layout_width="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,40 +62,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/tv_recomended"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginLeft="32dp"
-                    android:text="Recomended"
-                    android:textSize="18sp" />
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/rv_recomended"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_recomended"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginLeft="32dp"/>
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_recomended"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginTop="16dp"-->
+                    <!--android:layout_marginLeft="32dp"-->
+                    <!--android:text="Recomended"-->
+                    <!--android:textSize="18sp" />-->
+                <!---->
+                <!--<android.support.v7.widget.RecyclerView-->
+                    <!--android:id="@+id/rv_recomended"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/tv_recomended"-->
+                    <!--android:layout_marginTop="16dp"-->
+                    <!--/>-->
 
                 <TextView
                     android:id="@+id/tv_pantai"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/rv_recomended"
                     android:layout_marginTop="16dp"
                     android:layout_marginLeft="32dp"
                     android:text="Pantai"
                     android:textSize="18sp" />
-
+                <ProgressBar
+                    android:layout_below="@id/tv_pantai"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="64dp"
+                    android:id="@+id/progress_bar_pantai"
+                    android:indeterminateTint="@color/orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_pantai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_pantai"
                     android:layout_marginTop="12dp"
-                    android:layout_marginLeft="32dp"/>
+                    />
 
                 <TextView
                     android:id="@+id/tv_dataran_tinggi"
@@ -105,14 +112,21 @@
                     android:layout_marginLeft="32dp"
                     android:text="Dataran Tinggi"
                     android:textSize="18sp" />
-
+                <ProgressBar
+                    android:layout_below="@id/tv_dataran_tinggi"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="64dp"
+                    android:id="@+id/progress_bar_dataran_tinggi"
+                    android:indeterminateTint="@color/orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_dataran_tinggi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_dataran_tinggi"
                     android:layout_marginTop="12dp"
-                    android:layout_marginLeft="32dp"/>
+                    />
 
                 <TextView
                     android:id="@+id/tv_air_terjun"
@@ -121,15 +135,23 @@
                     android:layout_below="@id/rv_dataran_tinggi"
                     android:layout_marginTop="16dp"
                     android:text="Air Terjun"
+                    android:layout_marginLeft="32dp"
                     android:textSize="18sp" />
-
+                <ProgressBar
+                    android:layout_below="@id/tv_air_terjun"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="64dp"
+                    android:id="@+id/progress_bar_air_terjun"
+                    android:indeterminateTint="@color/orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_air_terjun"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_air_terjun"
                     android:layout_marginTop="12dp"
-                    android:layout_marginLeft="32dp"/>
+                    />
 
                 <TextView
                     android:id="@+id/tv_taman"
@@ -140,14 +162,21 @@
                     android:layout_marginLeft="32dp"
                     android:text="Taman"
                     android:textSize="18sp" />
-
+                <ProgressBar
+                    android:layout_below="@id/tv_taman"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="64dp"
+                    android:id="@+id/progress_bar_taman"
+                    android:indeterminateTint="@color/orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_taman"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_taman"
                     android:layout_marginTop="12dp"
-                    android:layout_marginLeft="32dp"/>
+                    />
 
                 <TextView
                     android:id="@+id/tv_umkm"
@@ -158,7 +187,14 @@
                     android:layout_marginLeft="32dp"
                     android:text="UMKM"
                     android:textSize="18sp" />
-
+                <ProgressBar
+                    android:layout_below="@id/tv_umkm"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="64dp"
+                    android:id="@+id/progress_bar_umkm"
+                    android:indeterminateTint="@color/orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_umkm"
                     android:layout_width="match_parent"

@@ -17,7 +17,7 @@ import id.lungodev.lungo.Jelajah.Model.Jelajah;
 import id.lungodev.lungo.R;
 import id.lungodev.lungo.Utils.GlideApp;
 
-class AirTerjunAdapter extends RecyclerView.Adapter<AirTerjunAdapter.AirTerjunHolder> {
+public class AirTerjunAdapter extends RecyclerView.Adapter<AirTerjunAdapter.AirTerjunHolder> {
     private List<Jelajah> listAirTerjun;
 
     public AirTerjunAdapter(List<Jelajah> listAirTerjun){
@@ -58,11 +58,11 @@ class AirTerjunAdapter extends RecyclerView.Adapter<AirTerjunAdapter.AirTerjunHo
             namaAirTerjun.setText(item.getNama());
             lokasiAirTerjun.setText(item.getLokasi_real());
             Log.d("FOTO", "bindItem: "+item.getFoto());
-//            GlideApp.with(itemView.getContext())
-//                    .asBitmap()
-//                    .load(item.getListFoto().get(0))
-//                    .fallback(R.color.teal)
-//                    .into(fotoRestoran);
+            GlideApp.with(itemView.getContext())
+                    .asBitmap()
+                    .load(item.getFoto().get(0))
+                    .fallback(R.color.teal)
+                    .into(fotoAirTerjun);
 
         }
     }

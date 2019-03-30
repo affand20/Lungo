@@ -29,8 +29,9 @@ import java.util.List;
 
 import id.lungodev.lungo.Jelajah.Model.Jelajah;
 import id.lungodev.lungo.R;
+import id.lungodev.lungo.Utils.GlideApp;
 
-class UmkmAdapter extends RecyclerView.Adapter<UmkmAdapter.UmkmHolder> {
+public class UmkmAdapter extends RecyclerView.Adapter<UmkmAdapter.UmkmHolder> {
     private List<Jelajah> listUmkm;
 
     public UmkmAdapter(List<Jelajah> listUmkm){
@@ -71,11 +72,11 @@ class UmkmAdapter extends RecyclerView.Adapter<UmkmAdapter.UmkmHolder> {
             namaUmkm.setText(item.getNama());
             lokasiUmkm.setText(item.getLokasi_real());
             Log.d("FOTO", "bindItem: "+item.getFoto());
-//            GlideApp.with(itemView.getContext())
-//                    .asBitmap()
-//                    .load(item.getListFoto().get(0))
-//                    .fallback(R.color.teal)
-//                    .into(fotoRestoran);
+            GlideApp.with(itemView.getContext())
+                    .asBitmap()
+                    .load(item.getFoto().get(0))
+                    .fallback(R.color.teal)
+                    .into(fotoUmkm);
 
         }
     }

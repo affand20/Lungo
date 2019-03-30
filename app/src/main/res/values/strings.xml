@@ -4,4 +4,11 @@
     <string name="lengkapi_profil">Lengkapi\nProfil Anda</string>
     <string name="greetings">Hai %1s</string>
     <string name="jelajah_banyuwangi">Jelajah\nBanyuwangi</string>
+    <string name="text_destinasi"><b>Taman Nasional Baluran</b></string>
+    <string name="durasi">%1s</string>
+    <string-array name="kota">
+        <item>Surabaya</item>
+        <item>Jember</item>
+        <item>Malang</item>
+    </string-array>
 </resources>

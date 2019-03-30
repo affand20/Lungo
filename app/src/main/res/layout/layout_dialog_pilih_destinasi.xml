@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:background="@color/orange"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/til_durasi"
+        android:textColorHint="@android:color/white"
+        android:hint="Masukkan Durasi"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
+            android:textColor="@android:color/white"
+            android:id="@+id/tie_durasi"
+            android:inputType="date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:text="Rekomendasi Driver"
+        android:layout_below="@id/til_durasi"
+        android:layout_marginTop="16dp"
+        android:id="@+id/tv_rekomendasi"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/rekomendasi_driver"
+        android:orientation="vertical"
+        android:layout_below="@id/tv_rekomendasi"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Bp Sukijan"
+            android:textSize="19sp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:text="081552783487"
+            android:textSize="19sp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:layout_height="0.5dp"/>
+        <TextView
+            android:text="Bp Sukimin"
+            android:textSize="19sp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"
+            android:text="081552783487"
+            android:textSize="19sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_height="0.5dp"/>
+        <TextView
+            android:textColor="@android:color/white"
+            android:text="Bp Sukidan"
+            android:textSize="19sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_marginTop="8dp"
+            android:text="081552783487"
+            android:textSize="19sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/grey"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_height="0.5dp"/>
+    </LinearLayout>
+    <android.support.design.button.MaterialButton
+        android:text="Selesai"
+        android:id="@+id/submit_pilihan"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/rekomendasi_driver"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

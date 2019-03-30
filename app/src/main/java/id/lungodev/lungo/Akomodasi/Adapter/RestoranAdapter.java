@@ -59,13 +59,13 @@ public class RestoranAdapter extends RecyclerView.Adapter<RestoranAdapter.Restor
 
         void bindItem(Akomodasi item){
             namaRestoran.setText(item.getNama());
-            lokasiRestoran.setText(item.getLokasiReal());
-            Log.d("FOTO", "bindItem: "+item.getListFoto());
-//            GlideApp.with(itemView.getContext())
-//                    .asBitmap()
-//                    .load(item.getListFoto().get(0))
-//                    .fallback(R.color.teal)
-//                    .into(fotoRestoran);
+            lokasiRestoran.setText(item.getLokasi_real());
+            Log.d("FOTO", "bindItem: "+item.getFoto());
+            GlideApp.with(itemView.getContext())
+                    .asBitmap()
+                    .load(item.getFoto().get(0))
+                    .fallback(R.color.teal)
+                    .into(fotoRestoran);
 
         }
     }

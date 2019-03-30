@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+
+    <android.support.design.button.MaterialButton
+        android:padding="16dp"
+        android:backgroundTint="@color/orange"
+        android:textColor="@android:color/white"
+        android:text="Jelajah Banyuwangi"
+        android:textAllCaps="false"
+        android:id="@+id/jelajah_banyuwangi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.button.MaterialButton
+        android:padding="16dp"
+        android:backgroundTint="@color/pink"
+        android:textColor="@android:color/white"
+        android:text="Akomodasi Banyuwangi"
+        android:layout_marginTop="32dp"
+        android:textAllCaps="false"
+        android:layout_below="@id/jelajah_banyuwangi"
+        android:id="@+id/akomodasi_banyuwangi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -64,33 +64,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:layout_marginTop="16dp"
-                    android:layout_marginLeft="32dp"
-                    android:id="@+id/tv_rekomendasi"
-                    android:text="Rekomendasi"
-                    android:textSize="18sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/rv_rekomendasi"
-                    android:layout_below="@id/tv_rekomendasi"
-                    android:layout_marginTop="12dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-                <ProgressBar
-                    android:indeterminateTint="@color/orange"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/tv_rekomendasi"
-                    android:layout_marginTop="16dp"
-                    android:visibility="gone"
-                    android:id="@+id/progress_rekomendasi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
                     android:id="@+id/tv_penginapan"
                     android:text="Penginapan"
                     android:layout_marginLeft="32dp"
-                    android:layout_below="@id/rv_rekomendasi"
                     android:layout_marginTop="16dp"
                     android:textSize="18sp"
                     android:layout_width="wrap_content"

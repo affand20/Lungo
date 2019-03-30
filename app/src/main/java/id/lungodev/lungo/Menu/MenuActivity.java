@@ -1,7 +1,6 @@
 package id.lungodev.lungo.Menu;
 
 import android.content.Intent;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +10,8 @@ import android.widget.TextView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import id.lungodev.lungo.Akomodasi.AkomodasiActivity;
+import id.lungodev.lungo.Jadwal.JadwalLiburanSayaActivity;
+import id.lungodev.lungo.Jelajah.JelajahActivity;
 import id.lungodev.lungo.R;
 import id.lungodev.lungo.Utils.GlideApp;
 
@@ -49,6 +50,20 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MenuActivity.this, AkomodasiActivity.class));
+            }
+        });
+
+        jadwalLiburan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuActivity.this, JadwalLiburanSayaActivity.class));
+            }
+        });
+
+        jelajahBanyuwangi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuActivity.this, JelajahActivity.class));
             }
         });
     }

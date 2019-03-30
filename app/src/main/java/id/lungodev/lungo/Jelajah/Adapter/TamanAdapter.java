@@ -16,7 +16,7 @@ import java.util.List;
 import id.lungodev.lungo.Jelajah.Model.Jelajah;
 import id.lungodev.lungo.R;
 import id.lungodev.lungo.Utils.GlideApp;
-class TamanAdapter extends RecyclerView.Adapter<TamanAdapter.TamanHolder> {
+public class TamanAdapter extends RecyclerView.Adapter<TamanAdapter.TamanHolder> {
     private List<Jelajah> listTaman;
 
     public TamanAdapter(List<Jelajah> listTaman){
@@ -57,11 +57,11 @@ class TamanAdapter extends RecyclerView.Adapter<TamanAdapter.TamanHolder> {
             namaTaman.setText(item.getNama());
             lokasiTaman.setText(item.getLokasi_real());
             Log.d("FOTO", "bindItem: "+item.getFoto());
-//            GlideApp.with(itemView.getContext())
-//                    .asBitmap()
-//                    .load(item.getListFoto().get(0))
-//                    .fallback(R.color.teal)
-//                    .into(fotoRestoran);
+            GlideApp.with(itemView.getContext())
+                    .asBitmap()
+                    .load(item.getFoto().get(0))
+                    .fallback(R.color.teal)
+                    .into(fotoTaman);
 
         }
     }

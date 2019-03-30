@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Jadwal.JadwalLiburanSayaActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/bg_kelola_jadwal"
+            android:background="@drawable/kelola_menu"
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+            <RelativeLayout
+                android:layout_marginTop="32dp"
+                android:id="@+id/back_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_centerVertical="true"
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_chevron_left_24dp"
+                    />
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kembali"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:text="Kelola\nJadwal Liburan"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="16dp"
+            android:background="@android:color/white"
+            android:layout_below="@id/bg_kelola_jadwal"
+            android:layout_marginTop="-16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:padding="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/progress_bar"
+                    android:indeterminateTint="@color/orange"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_jadwal_saya"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <android.support.design.widget.FloatingActionButton
+                    app:backgroundTint="@color/teal"
+                    android:id="@+id/btn_add_jadwal"
+                    android:layout_below="@id/rv_jadwal_saya"
+                    android:src="@drawable/ic_add_white_24dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</ScrollView>
