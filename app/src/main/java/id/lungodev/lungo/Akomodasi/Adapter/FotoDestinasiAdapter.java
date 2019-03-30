@@ -1,4 +1,4 @@
-package id.lungodev.lungo.Jelajah.Adapter;
+package id.lungodev.lungo.Akomodasi.Adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;

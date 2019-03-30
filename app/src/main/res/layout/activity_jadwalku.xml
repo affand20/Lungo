@@ -51,7 +51,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <android.support.v7.widget.CardView
-                    android:layout_margin="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:elevation="6dp"
                     app:cardCornerRadius="16dp"
                     android:layout_width="match_parent"
@@ -87,7 +90,7 @@
                             android:layout_height="wrap_content">
                             <TextView
                                 android:id="@+id/waktu_berangkat"
-                                android:text="Berangkat pada %1s"
+                                android:text="@string/wkt_berangkat"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
@@ -95,10 +98,12 @@
 
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.CardView
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     android:elevation="6dp"
                     app:cardCornerRadius="16dp"
-                    android:layout_margin="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <LinearLayout
@@ -133,7 +138,7 @@
                             android:layout_height="wrap_content">
                             <TextView
                                 android:id="@+id/estimasi_tiba"
-                                android:text="Estimasi tiba pada %1s"
+                                android:text="@string/estimasi_wkt"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
@@ -141,7 +146,7 @@
                 </android.support.v7.widget.CardView>
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_destinasi"
-                    android:layout_marginTop="16dp"
+                    tools:listitem="@layout/layout_jadwal_destinasi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <android.support.v7.widget.CardView

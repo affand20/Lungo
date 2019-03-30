@@ -18,7 +18,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
             <RelativeLayout
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="32dp"
                 android:id="@+id/back_layout"
                 android:layout_width="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
@@ -105,6 +105,7 @@
                     android:backgroundTint="@color/orange"
                     android:textColor="@android:color/white"
                     android:text="Pilih"
+                    android:visibility="invisible"
                     android:id="@+id/pilih_destinasi"
                     android:layout_marginTop="16dp"
                     android:textAllCaps="false"

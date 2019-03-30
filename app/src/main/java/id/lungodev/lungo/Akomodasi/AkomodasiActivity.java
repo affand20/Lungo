@@ -30,6 +30,8 @@ public class AkomodasiActivity extends AppCompatActivity implements AkomodasiVie
 
     private List<Akomodasi> listRestoran, listPenginapan;
 
+    private String status;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +42,8 @@ public class AkomodasiActivity extends AppCompatActivity implements AkomodasiVie
         rvPenginapan = findViewById(R.id.rv_penginapan);
         progressRestoran = findViewById(R.id.progress_restoran);
         progressPenginapan = findViewById(R.id.progress_penginapan);
+
+        status = getIntent().getStringExtra("status");
 
         backLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +70,9 @@ public class AkomodasiActivity extends AppCompatActivity implements AkomodasiVie
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 Intent intent = new Intent(AkomodasiActivity.this, DetailAkomodasiActivity.class);
                 intent.putExtra("akomodasi", listRestoran.get(position));
+                if (status!=null){
+                    intent.putExtra("status", status);
+                }
                 startActivity(intent);
             }
         });
@@ -75,6 +82,9 @@ public class AkomodasiActivity extends AppCompatActivity implements AkomodasiVie
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 Intent intent = new Intent(AkomodasiActivity.this, DetailAkomodasiActivity.class);
                 intent.putExtra("akomodasi", listPenginapan.get(position));
+                if (status!=null){
+                    intent.putExtra("status", status);
+                }
                 startActivity(intent);
             }
         });

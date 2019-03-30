@@ -53,6 +53,8 @@ public class JelajahActivity extends AppCompatActivity {
 
     private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("wisata");
 
+    private String status;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,11 +85,16 @@ public class JelajahActivity extends AppCompatActivity {
             }
         });
 
+        status = getIntent().getStringExtra("status");
+
         ItemClickSupport.addTo(rvPantai).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 Intent intent = new Intent(JelajahActivity.this, DetailJelajahActivity.class);
                 intent.putExtra("jelajah", listPantai.get(position));
+                if (status!=null){
+                    intent.putExtra("status", status);
+                }
                 startActivity(intent);
             }
         });
@@ -97,6 +104,9 @@ public class JelajahActivity extends AppCompatActivity {
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 Intent intent = new Intent(JelajahActivity.this, DetailJelajahActivity.class);
                 intent.putExtra("jelajah", listDataranTinggi.get(position));
+                if (status!=null){
+                    intent.putExtra("status", status);
+                }
                 startActivity(intent);
             }
         });
@@ -106,6 +116,9 @@ public class JelajahActivity extends AppCompatActivity {
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 Intent intent = new Intent(JelajahActivity.this, DetailJelajahActivity.class);
                 intent.putExtra("jelajah", listUmkm.get(position));
+                if (status!=null){
+                    intent.putExtra("status", status);
+                }
                 startActivity(intent);
             }
         });
@@ -115,6 +128,9 @@ public class JelajahActivity extends AppCompatActivity {
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 Intent intent = new Intent(JelajahActivity.this, DetailJelajahActivity.class);
                 intent.putExtra("jelajah", listTaman.get(position));
+                if (status!=null){
+                    intent.putExtra("status", status);
+                }
                 startActivity(intent);
             }
         });
@@ -124,6 +140,9 @@ public class JelajahActivity extends AppCompatActivity {
             public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                 Intent intent = new Intent(JelajahActivity.this, DetailJelajahActivity.class);
                 intent.putExtra("jelajah", listAirTerjun.get(position));
+                if (status!=null){
+                    intent.putExtra("status", status);
+                }
                 startActivity(intent);
             }
         });

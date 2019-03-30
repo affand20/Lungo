@@ -1,9 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Akomodasi.DetailAkomodasiActivity">
+    tools:context=".Jelajah.DetailJelajahActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <ImageView
+                android:id="@+id/thumbnail_destinasi"
+                android:background="@drawable/akomodasi_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <RelativeLayout
+                android:layout_marginTop="32dp"
+                android:id="@+id/back_layout"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_centerVertical="true"
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_chevron_left_24dp"
+                    />
 
-</android.support.constraint.ConstraintLayout>
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kembali"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+        <android.support.v7.widget.CardView
+            app:cardCornerRadius="16dp"
+            android:layout_marginTop="-16dp"
+            app:contentPadding="32dp"
+            android:layout_below="@id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/nama_destinasi"
+                    android:textSize="20sp"
+                    android:text="Taman Nasional Baluran"
+                    android:layout_width="wrap_content"
+                    android:maxWidth="200dp"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/layout_rating"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:src="@drawable/ic_star_24dp"
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:src="@drawable/ic_star_24dp"
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:src="@drawable/ic_star_24dp"
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:src="@drawable/ic_star_24dp"
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageButton
+                        android:src="@drawable/ic_star_border_24dp"
+                        android:background="@android:color/transparent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <android.support.design.button.MaterialButton
+                    android:visibility="invisible"
+                    android:backgroundTint="@color/orange"
+                    android:textColor="@android:color/white"
+                    android:text="Pilih"
+                    android:id="@+id/pilih_destinasi"
+                    android:layout_marginTop="16dp"
+                    android:textAllCaps="false"
+                    android:layout_below="@id/nama_destinasi"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_below="@id/pilih_destinasi"
+                    android:layout_marginTop="16dp"
+                    android:text="Foto"
+                    android:id="@+id/tv_foto"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_foto"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/tv_foto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Lokasi"
+                    android:textSize="20sp"
+                    android:layout_below="@id/rv_foto"
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/tv_lokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/lokasi_destinasi"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tv_lokasi"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                    android:text="Jl. Jalan di Banyuwangi No.333"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_review"
+                    android:text="Review"
+                    android:textSize="20sp"
+                    android:layout_below="@id/lokasi_destinasi"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_review"
+                    android:visibility="gone"
+                    android:layout_below="@id/tv_review"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:text="Belum ada review"
+                    android:textSize="18sp"
+                    android:layout_below="@id/tv_review"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</ScrollView>

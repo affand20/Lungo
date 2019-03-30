@@ -67,8 +67,8 @@ public class JadwalkuActivity extends AppCompatActivity {
         if (jadwal!=null){
             key = jadwal.getId();
             kotaAsal.setText(jadwal.getKotaAsal());
-            estimasi.setText(jadwal.getEstimasi());
-            waktuBerangkat.setText(jadwal.getWaktuBerangkat());
+            estimasi.setText(String.format(getResources().getString(R.string.estimasi_wkt), jadwal.getEstimasi()));
+            waktuBerangkat.setText(String.format(getResources().getString(R.string.wkt_berangkat), jadwal.getWaktuBerangkat()));
             kendaraan.setText(jadwal.getTransport());
         }
         rvDestinasi.setLayoutManager(new LinearLayoutManager(this));
@@ -86,7 +86,7 @@ public class JadwalkuActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         dialog.dismiss();
-                        startActivity(new Intent(JadwalkuActivity.this, JelajahActivity.class));
+                        startActivity(new Intent(JadwalkuActivity.this, JelajahActivity.class).putExtra("status", "TAMBAH_DESTINASI"));
                     }
                 });
 
@@ -94,7 +94,7 @@ public class JadwalkuActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         dialog.dismiss();
-                        startActivity(new Intent(JadwalkuActivity.this, AkomodasiActivity.class));
+                        startActivity(new Intent(JadwalkuActivity.this, AkomodasiActivity.class).putExtra("status", "TAMBAH_DESTINASI"));
                     }
                 });
                 dialog.show();

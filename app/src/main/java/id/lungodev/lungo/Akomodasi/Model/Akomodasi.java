@@ -8,6 +8,7 @@ public class Akomodasi implements Serializable {
     private String lokasi_real;
     private int rating;
     private List<String> foto;
+    private String video_url;
 
     public String getNama() {
         return nama;

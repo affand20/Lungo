@@ -58,6 +58,10 @@ public class DetailJelajahActivity extends AppCompatActivity {
             }
         });
 
+        if (getIntent().getStringExtra("status")!=null && getIntent().getStringExtra("status").equals("TAMBAH_DESTINASI")){
+            pilihDestinasi.setVisibility(View.VISIBLE);
+        }
+
         rvFotoDestinasi.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         pilihDestinasi.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +93,7 @@ public class DetailJelajahActivity extends AppCompatActivity {
                         FirebaseDatabase.getInstance().getReference("users/"+ FirebaseAuth.getInstance().getCurrentUser().getUid()+"/riwayatJadwal/"+ JadwalkuActivity.key+"/destinasi").push().setValue(destinasiku).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                startActivity(new Intent(DetailJelajahActivity.this, JadwalLiburanSayaActivity.class));
+                                startActivity(new Intent(DetailJelajahActivity.this, JadwalLiburanSayaActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                                 finish();
                             }
                         });
@@ -105,6 +109,7 @@ public class DetailJelajahActivity extends AppCompatActivity {
         GlideApp.with(this)
                 .asBitmap()
                 .load(jelajah.getFoto().get(0))
+                .centerCrop()
                 .into(thumbnailDestinasi);
 
 
